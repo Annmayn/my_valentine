@@ -18,6 +18,7 @@ const Valentines = () => {
     "ontouchstart" in window || navigator.maxTouchPoints > 0;
   const remainingCount: number = NEEDED_NO_COUNT - noCount;
   const canClickNo = remainingCount > 1;
+  const isMoving = pos[0] !== null;
 
   const reset = () => {
     setNoCount(0);
@@ -70,6 +71,7 @@ const Valentines = () => {
             y={pos[1]}
             isTouchDevice={isTouchDevice}
             visible={visible}
+            isMoving={isMoving}
           >
             <StyledButton
               onMouseEnter={randomizeLocation}
