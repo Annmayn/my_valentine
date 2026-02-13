@@ -12,6 +12,11 @@ const StyledStack = styled.div<StackProps>`
   justify-content: center;
   align-items: center;
   gap: ${(props) => props.gap || "0px"};
+
+  @media (width < 40rem) {
+    flex-direction: column;
+    gap: 3rem;
+  }
 `;
 
 export default StyledStack;

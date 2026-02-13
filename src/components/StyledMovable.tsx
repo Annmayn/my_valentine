@@ -13,7 +13,7 @@ const StyledMovable = styled.div<StyledMovableProps>`
   position: ${(p) => `${p.isMoving ? "fixed" : "relative"}`};
   ${(p) => p.isMoving && `left: ${p.x}vw`};
   ${(p) => p.isMoving && `bottom: ${p.x}vh`};
-  ${(p) => p.isMoving && `calc(1rem * ${p.fontSizeMultiplier})`};
+  ${(p) => p.isMoving && `font-size: ${p.fontSizeMultiplier}rem !important`};
   ${(p) =>
     p.isMoving && `opacity: ${p.isTouchDevice && !p.visible ? "0" : "1"}`};
   transition:

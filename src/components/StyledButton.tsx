@@ -1,11 +1,33 @@
 import styled from "styled-components";
 
-const StyledButton = styled.button<{ $primary?: boolean }>`
-  background: ${(props) => (props.$primary ? "hsl(100, 100%, 60%)" : "hsl(200, 100%, 60%)")};
-  color: ${(props) => (props.$primary ? "white" : "blue")}  
-  font-size: 1em;
-  border: 2px solid hsl(100, 100%, 60%);
-  border-radius: 5px;
+interface StyledButtonProps {
+  primary?: boolean;
+  size?: "sm" | "md" | "lg";
+}
+
+const sizeMap = {
+  sm: 1,
+  md: 1.3,
+  lg: 1.9,
+};
+
+const StyledButton = styled.button<StyledButtonProps>`
+  position: relative;
+  font-size: ${(props) => `${sizeMap[props.size ?? "md"]}em`};
+  border-radius: 16px;
+  cursor: none;
+  -webkit-animation: pulse 1.5s infinite;
+
+  //.pulse {
+  //  transform: scale(1.5);
+  //  animation: fadeIn 0.8s ease-out forwards;
+  //}
+  //
+  //@keyframes fadeIn {
+  //  to {
+  //    transform: scale(1);
+  //  }
+  //}
 `;
 
 export default StyledButton;

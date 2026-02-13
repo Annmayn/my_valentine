@@ -5,6 +5,8 @@ const StyledContainer = styled.div`
   width: 100%;
   text-align: center;
   place-content: center;
+  padding: 20px;
+  color: white;
 `;
 
 export default StyledContainer;
