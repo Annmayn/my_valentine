@@ -1,9 +1,9 @@
 import Question from "./Question.tsx";
-import Greetings from "./Greetings.tsx";
 import { useCallback, useState } from "react";
-import Stats from "./Stats.tsx";
 import StyledMain from "../../components/StyledMain.tsx";
 import { Particles } from "@/components/magicui/particles.tsx";
+import Greetings from "@/pages/valentines/Greetings.tsx";
+import Stats from "@/pages/valentines/Stats.tsx";
 
 const pageOrder = [Greetings, Stats, Question];
 
