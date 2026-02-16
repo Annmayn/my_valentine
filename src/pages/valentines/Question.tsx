@@ -112,7 +112,7 @@ const Question = ({ nextPage }: FlowStepProps) => {
         <>
           <StyledStack className={"fade-in"} direction={"vertical"}>
             <ComicText>Will you be my</ComicText>
-            <CoolMode options={{ particle: "/my_valentine/public/heart.svg" }}>
+            <CoolMode options={{ particle: "/my_valentine/heart.svg" }}>
               <AuroraText
                 className="text-4xl sm:text-9xl font-bold fade-in-slow"
                 colors={["red", "pink", "cyan", "purple"]}
